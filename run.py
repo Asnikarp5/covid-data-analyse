@@ -38,6 +38,9 @@ Covid_df = Covid_df.drop(['X','Y','Date','CommunityTransmission','CloseContact',
 
 Covid_df.StatisticsProfileDate = pd.to_datetime(Covid_df.StatisticsProfileDate).dt.date
 
+
+""" Storedclean data into csv files"""
+
 Covid_df.to_csv("Clean_data.csv")
 
 Hospitalised_df=Covid_df[['StatisticsProfileDate','HospitalisedAged5','HospitalisedAged5to14','HospitalisedAged15to24','HospitalisedAged25to34','HospitalisedAged35to44','HospitalisedAged45to54','HospitalisedAged55to64','HospitalisedAged65to74','HospitalisedAged75to84','HospitalisedAged85up']].copy()
